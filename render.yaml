@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: pr-file-store-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python pr_file_store_bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: OWNER_USERNAME
+        sync: false
+      - key: LOG_CHANNEL_ID
+        sync: false
+      - key: LOG_CHANNEL_USERNAME
+        sync: false
+      - key: CHANNEL_LINK
+        sync: false
+      - key: SUPPORT_LINK
+        sync: false
+      - key: AUTO_DELETE_TIME
+        value: "3600"
+      - key: FSUB_CHANNELS
+        sync: false
